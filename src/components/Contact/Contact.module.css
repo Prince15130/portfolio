@@ -1,0 +1,91 @@
+.section {
+  padding: 0 var(--space-8) var(--space-8);
+}
+
+.card {
+  background: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+  border-radius: var(--radius-xl);
+  padding: var(--space-20) var(--space-16);
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: var(--space-6);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: var(--space-6);
+}
+
+.accent {
+  color: var(--color-action-primary);
+}
+
+.sub {
+  font-size: var(--text-md);
+  color: #666;
+  font-weight: 300;
+  margin-bottom: var(--space-10);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-block;
+  background: var(--color-action-primary);
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.btnPrimary:hover {
+  background: var(--color-action-primary-hover);
+}
+
+.btnOutline {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #333;
+  text-decoration: none;
+  transition: border-color var(--transition);
+}
+
+.btnOutline:hover {
+  border-color: #666;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 0 24px 24px; }
+  .card { padding: var(--space-16) 24px; }
+}

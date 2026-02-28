@@ -1,0 +1,14 @@
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.blue   { background: var(--color-tag-blue-bg);   color: var(--color-tag-blue-text); }
+.orange { background: var(--color-tag-orange-bg);  color: var(--color-tag-orange-text); }
+.black  { background: var(--color-tag-grey-bg);   color: var(--color-tag-grey-text); }

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(yarn tsc --noEmit)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(yarn build)",
+      "Bash(yarn --version)",
+      "Bash(ls /Users/saurav/Downloads/portfolio/.pnp*)",
+      "Bash(yarn dlx @yarnpkg/sdks vscode)",
+      "Bash(yarn install)",
+      "Bash(ls -la /Users/saurav/Downloads/portfolio/.pnp*)"
+    ]
+  }
+}

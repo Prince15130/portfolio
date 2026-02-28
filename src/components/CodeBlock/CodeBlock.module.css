@@ -1,0 +1,58 @@
+.wrap {
+  background: var(--color-code-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: var(--space-6) 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--space-5);
+  background: #1e2433;
+  border-bottom: 1px solid #2a3040;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red    { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green  { background: #28c840; }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: #666;
+  letter-spacing: 0.06em;
+}
+
+.body {
+  padding: var(--space-8);
+  overflow-x: auto;
+}
+
+.pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.9;
+  color: #e2e8f0;
+  white-space: pre;
+}
+
+/* Syntax tokens — aligned with token compiler's output */
+.pre :global(.ck) { color: #c792ea; }          /* keyword */
+.pre :global(.cs) { color: #c3e88d; }          /* string  */
+.pre :global(.cc) { color: #546e7a; font-style: italic; }  /* comment */
+.pre :global(.cf) { color: #82aaff; }          /* function */
+.pre :global(.cn) { color: #f78c6c; }          /* number  */
+.pre :global(.cp) { color: #ffcb6b; }          /* type / prop */

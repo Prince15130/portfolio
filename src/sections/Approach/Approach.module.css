@@ -1,0 +1,96 @@
+.section {
+  background: var(--color-surface-subtle);
+  border-radius: 32px;
+  margin: 0 var(--space-8);
+  padding: var(--space-20) var(--space-16);
+}
+
+/* Steps row */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+}
+
+/* Connector line behind the circles */
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: var(--color-border-default);
+}
+
+/* Individual step */
+.step {
+  text-align: center;
+  padding: 0 var(--space-4);
+  position: relative;
+}
+
+/* Circle */
+.circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+
+.circle_one   { background: #ffe8e1; border-color: var(--color-accent); }
+.circle_two   { background: #e1eeff; border-color: var(--color-action-primary); }
+.circle_three { background: #e1ffe8; border-color: #00aa44; }
+.circle_four  { background: #fff5e1; border-color: #ff9900; }
+.circle_five  { background: #f0e1ff; border-color: #8844ff; }
+
+.emoji {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Step title */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+/* Step description */
+.desc {
+  font-size: var(--text-xs);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .section {
+    margin: 0 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

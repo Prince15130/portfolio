@@ -1,0 +1,111 @@
+/*
+ * ============================================================
+ * DESIGN TOKENS — src/styles/tokens.css
+ * Mimics Vanilla Extract's createThemeContract pattern.
+ * In a real VE setup, these would be typed CSS contracts.
+ * ============================================================
+ */
+
+:root {
+  /* ── Color Primitives ── */
+  --primitive-blue-400: #3385ff;
+  --primitive-blue-500: #0066ff;
+  --primitive-blue-600: #0044cc;
+  --primitive-blue-900: #001a66;
+  --primitive-orange-400: #ff6640;
+  --primitive-orange-500: #ff4f1f;
+  --primitive-grey-0: #ffffff;
+  --primitive-grey-50: #f7f7f5;
+  --primitive-grey-100: #ebebeb;
+  --primitive-grey-200: #d4d4d4;
+  --primitive-grey-500: #888888;
+  --primitive-grey-700: #444444;
+  --primitive-grey-900: #1a1a1a;
+  --primitive-grey-950: #0d0d0d;
+  --primitive-green-500: #16a34a;
+  --primitive-amber-500: #d97706;
+  --primitive-red-500: #dc2626;
+  --primitive-code-bg: #111827;
+
+  /* ── Semantic Color Tokens ── */
+  --color-action-primary: var(--primitive-blue-500);
+  --color-action-primary-hover: var(--primitive-blue-600);
+  --color-action-secondary: var(--primitive-grey-950);
+  --color-accent: var(--primitive-orange-500);
+  --color-surface-default: var(--primitive-grey-0);
+  --color-surface-subtle: var(--primitive-grey-50);
+  --color-surface-strong: var(--primitive-grey-100);
+  --color-surface-inverse: var(--primitive-grey-950);
+  --color-border-default: var(--primitive-grey-100);
+  --color-border-strong: var(--primitive-grey-200);
+  --color-text-primary: var(--primitive-grey-950);
+  --color-text-secondary: var(--primitive-grey-700);
+  --color-text-tertiary: var(--primitive-grey-500);
+  --color-text-on-inverse: var(--primitive-grey-0);
+  --color-text-link: var(--primitive-blue-500);
+  --color-text-accent: var(--primitive-orange-500);
+  --color-feedback-success: var(--primitive-green-500);
+  --color-feedback-warning: var(--primitive-amber-500);
+  --color-feedback-error: var(--primitive-red-500);
+
+  /* Component-level tokens */
+  --color-tag-blue-bg: #e8f0ff;
+  --color-tag-blue-text: var(--primitive-blue-500);
+  --color-tag-orange-bg: #fff0eb;
+  --color-tag-orange-text: var(--primitive-orange-500);
+  --color-tag-grey-bg: var(--primitive-grey-50);
+  --color-tag-grey-text: var(--primitive-grey-950);
+
+  /* ── Spacing Scale ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ── Border Radius ── */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── Elevation / Shadow ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.16);
+  --shadow-blue: 0 8px 32px rgba(0, 102, 255, 0.25);
+
+  /* ── Typography ── */
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 42px;
+
+  /* ── Motion ── */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+  --ease-default: ease;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition: var(--duration-base) var(--ease-default);
+}

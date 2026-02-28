@@ -1,0 +1,16 @@
+.main {
+  animation: fadeIn 0.4s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.awardsSection {
+  padding: var(--space-20) var(--space-16) 0;
+}
+
+@media (max-width: 768px) {
+  .awardsSection { padding-left: 24px; padding-right: 24px; }
+}
