@@ -3,7 +3,6 @@
  * ============================================================ */
 
 import storybookDatagrid from "../assets/storybook-datagrid.png";
-import radiologyViewer from "../assets/radiology-viewer.png";
 import filamentQuickstart from "../assets/filament-quickstart.png";
 import vanillaExtractDocs from "../assets/vanilla-extract-docs.png";
 import settingsTemplate from "../assets/settings-template.png";
@@ -310,6 +309,14 @@ export const compileTokens = async (
         caption: "MCP Results & Impact Metrics",
         sub: "Measured productivity gains: 30% faster development, 75% fewer review cycles, and 8% rework rate across 5 product lines",
         section: "result",
+      },
+    ],
+    videos: [
+      {
+        video: new URL("../assets/Filament-MCP_Demo.mov", import.meta.url).href,
+        caption: "MCP Demo",
+        sub: "Live demo of the MCP server in action — AI agent generating Filament-compliant React code on the first try, with no manual intervention",
+        section: "gallery",
       },
     ],
     code: {

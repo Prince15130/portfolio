@@ -16,6 +16,13 @@ export interface Screenshot {
   section?: "challenge" | "task" | "pipeline" | "result" | "gallery";
 }
 
+export interface Video {
+  video: string;
+  caption: string;
+  sub: string;
+  section?: "challenge" | "task" | "pipeline" | "result" | "gallery";
+}
+
 export interface Metric {
   val: string;
   lbl: string;
@@ -44,6 +51,7 @@ export interface Project {
     R: StarEntry;
   };
   screenshots: Screenshot[];
+  videos?: Video[];
   code: CodeBlock;
   // Rich narrative fields for the editorial layout
   challengeText?: string;

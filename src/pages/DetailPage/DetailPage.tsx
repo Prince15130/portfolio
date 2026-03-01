@@ -4,6 +4,7 @@ import { projects } from "../../data/projects";
 import MetricsStrip from "../../components/MetricsStrip/MetricsStrip";
 import StarCard from "../../components/StarCard/StarCard";
 import Screenshot from "../../components/Screenshot/Screenshot";
+import Video from "../../components/Video/Video";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
@@ -61,6 +62,10 @@ export default function DetailPage() {
   const resultShots = project.screenshots.filter((s) => s.section === "result");
   const galleryShots = project.screenshots.filter(
     (s) => !s.section || s.section === "gallery",
+  );
+
+  const galleryVideos = (project.videos || []).filter(
+    (v) => !v.section || v.section === "gallery",
   );
 
   return (
@@ -240,13 +245,16 @@ export default function DetailPage() {
       </section>
 
       {/* ── Gallery ── */}
-      {galleryShots.length > 0 && (
+      {(galleryShots.length > 0 || galleryVideos.length > 0) && (
         <section className={styles.gallerySection}>
           <p className={styles.overline}>Screens &amp; Artefacts</p>
           <h2 className={styles.galleryHeading}>Key Deliverables</h2>
           <div className={styles.galleryGrid}>
             {galleryShots.map((s, i) => (
-              <Screenshot key={i} item={s} />
+              <Screenshot key={`shot-${i}`} item={s} />
+            ))}
+            {galleryVideos.map((v, i) => (
+              <Video key={`video-${i}`} item={v} />
             ))}
           </div>
         </section>
