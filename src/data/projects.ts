@@ -12,12 +12,15 @@ import reactComponents from "../assets/react-components.png";
 import tokenPipeline from "../assets/token-pipeline.png";
 import DesignSystemChallenge from "../assets/design-system-challenge.png";
 import caseStudy from "../assets/Case Study Final Frame.png";
-import tokenSystem from "../assets/token-system.png";
-import tokenNaming from "../assets/tokens-naming.png";
 import Filament from "../assets/Filament-Design-System.png";
 import Result from "../assets/Result.png";
 import businessGoals from "../assets/business-goals.png";
 import designGoals from "../assets/design-goals.png";
+import MCPArchitecture from "../assets/Filament-MCP.png";
+import MCPMindmap from "../assets/MCP Tools MindMap.png";
+import BeforeAfter from "../assets/BeforevsAfter.png";
+import MCPResponse from "../assets/MCP Fiirst Response.png";
+import MCPResult from "../assets/MCP Result.png";
 
 import type { Project } from "./types";
 
@@ -82,66 +85,79 @@ export const projects: Project[] = [
         img: DesignSystemChallenge,
         caption: "Filament Design System Challenge",
         sub: "Fragmented toolkits, inconsistent UX, and slow time-to-market across 300+ applications — the problem Filament was built to solve",
+        section: "challenge",
       },
       {
         img: caseStudy,
         caption: "Case Study",
         sub: "Case study frame from the Filament Design System project",
+        section: "challenge",
       },
       {
         img: businessGoals,
         caption: "Business Goals",
         sub: "Illustration of the business goals driving the Filament Design System project",
+        section: "task",
       },
       {
         img: designGoals,
         caption: "Design Goals",
         sub: "Illustration of the design goals driving the Filament Design System project",
+        section: "task",
       },
       {
         img: tokenPipeline,
         caption: "Token-to-Template Pipeline",
         sub: "Filament Tokens → Token Compiler → Themes (VE contracts) → Component Styles → React Components → Templates",
+        section: "pipeline",
       },
       {
         img: Filament,
         caption: "Filament Design System",
         sub: "One design system for all of Philips — from ICU patient monitors to consumer health apps — with 60+ accessible React components and a scalable token architecture",
+        section: "result",
       },
       {
         img: Result,
         caption: "Project Results",
         sub: "Measured impact and outcomes of the Filament Design System project",
+        section: "result",
       },
       {
         img: filamentQuickstart,
         caption: "Developer Documentation",
         sub: "Quick start guide with integration examples for SPA (Vite), MPA (Next.js), and module federation",
+        section: "gallery",
       },
       {
         img: vanillaExtractDocs,
         caption: "Vanilla Extract Plugin Setup",
         sub: "Theme configuration via Vite/Next.js plugin — zero-config setup for teams adopting the DS",
+        section: "gallery",
       },
       {
         img: themeSetup,
         caption: "Multi-Theme Architecture",
         sub: "Four theme layers: Blue, Expressive, Light, Medium — all driven by Vanilla Extract CSS contracts",
+        section: "gallery",
       },
       {
         img: reactComponents,
         caption: "React Component API Docs",
         sub: "Typed component imports, icon/pictogram bundles, usage examples — version 4.7.1",
+        section: "gallery",
       },
       {
         img: settingsTemplate,
         caption: "Application Settings Template",
         sub: "Full-featured settings page built entirely from Filament components — theme switcher, localization, preferences",
+        section: "gallery",
       },
       {
         img: storybookDatagrid,
         caption: "Storybook — Datagrid Template",
         sub: "Living documentation with interactive templates, source code, controls, and accessibility tab",
+        section: "gallery",
       },
     ],
     code: {
@@ -214,7 +230,7 @@ export const compileTokens = async (
     num: "02",
     title: "AI-Powered Component Generation",
     subtitle:
-      "MCP server + LLM integration eliminating manual design system adaptation for engineering teams",
+      "MCP server + LLM integration that gives AI coding agents live access to the Filament design system — so they generate DS-compliant React, iOS, and Android code on the first try.",
     tags: [
       "MCP Protocol",
       "AI Integration",
@@ -223,7 +239,7 @@ export const compileTokens = async (
       "Developer Experience",
     ],
     problem:
-      "Engineers using LLMs to generate React code received generic output that ignored the Filament Design System entirely — spending 2-3 hours per component manually adapting AI output.",
+      "Engineers using AI tools like GitHub Copilot and Claude Code to build Philips UIs were getting generic, non-compliant output — wrong component names, incorrect props, made-up imports. They'd spend 2–3 hours per screen manually searching Storybook, copy-pasting examples, and fixing AI hallucinations. The Filament Design System existed, but AI agents had no way to access it.",
     role: "Designed and built the custom MCP (Model Context Protocol) server exposing the Filament component registry to LLMs, enabling first-pass compliant code generation.",
     outcome:
       "30% faster development across 5 product lines. 75% fewer design-dev clarification cycles. Rework rate dropped from 30% to 8%.",
@@ -238,7 +254,7 @@ export const compileTokens = async (
       S: {
         title: "Situation",
         subtitle: "The AI adaptation bottleneck",
-        text: "As AI coding tools became ubiquitous in engineering workflows, a hidden bottleneck emerged: LLMs generate generic React code completely unaware of the Filament Design System. Engineers were using Copilot and ChatGPT to accelerate component development, but every output needed 2–3 hours of manual adaptation — swapping HTML elements for Filament components, replacing hard-coded colours with semantic tokens, wiring up correct ARIA roles, and matching the precise variant API. The promise of AI-assisted development was being entirely consumed by DS adaptation.",
+        text: "Engineers using AI tools like GitHub Copilot and Claude Code to build Philips UIs were getting generic, non-compliant output — wrong component names, incorrect props, made-up imports. They'd spend 2–3 hours per screen manually searching Storybook, copy-pasting examples, and fixing AI hallucinations. The Filament Design System existed, but AI agents had no way to access it.",
         highlight:
           "The problem: AI acceleration created a new DS compliance debt that was invisible until code review — often late in the sprint.",
       },
@@ -252,7 +268,7 @@ export const compileTokens = async (
       A: {
         title: "Action",
         subtitle: "Building the MCP server",
-        text: "I built a custom MCP server in TypeScript exposing the complete Filament component registry as a structured tool API. The server has three core tools: get_component (returns full API, variants, token constraints, ARIA requirements), list_components (searchable catalogue with categories and tags), and validate_usage (checks whether proposed usage matches DS guidelines). I structured the component registry as typed JSON with semantic metadata the LLM can reason over — variant options, required props, forbidden patterns, and ready-to-use code examples. I also built prompt templates that prime the LLM to use DS components before generating code.",
+        text: "Designed and built the Filament MCP Server — a hosted, schema-driven server with 14 tools across 4 categories: API (search_api, find_api_examples, search_api_member), Assets (search_assets, get_asset), Templates (find_templates, get_template), and Docs (documentation, setup, rules). Architected it as platform-agnostic from the ground up so React, Swift, and Kotlin libraries all share the same server logic. Integrated with VS Code Copilot, Claude Code, and Windsurf with zero local installation required.",
         highlight:
           "Architecture decision: the component registry is the single source of truth — same data powers Storybook, the MCP server, and automated testing.",
       },
@@ -266,14 +282,34 @@ export const compileTokens = async (
     },
     screenshots: [
       {
-        img: settingsTemplate,
-        caption: "AI-Generated Settings Screen",
-        sub: "Full settings page generated with MCP-assisted workflow — compliant Filament components, correct tokens, zero manual adaptation",
+        img: BeforeAfter,
+        caption: "Before vs After MCP Integration",
+        sub: "Developer workflow transformation — from manual Storybook searches and AI hallucinations to first-pass compliant code generation",
+        section: "challenge",
       },
       {
-        img: reactComponents,
-        caption: "Component Registry API",
-        sub: "The structured component API the MCP server exposes to LLMs — complete variant options, import paths, usage examples",
+        img: MCPArchitecture,
+        caption: "MCP Server Architecture",
+        sub: "Multi-platform MCP server exposing Filament component registry, tokens, and documentation to LLMs across React, iOS, and Android",
+        section: "task",
+      },
+      {
+        img: MCPMindmap,
+        caption: "MCP Tools Mindmap",
+        sub: "14 tools across 4 categories: API discovery, asset management, template generation, and documentation access",
+        section: "task",
+      },
+      {
+        img: MCPResponse,
+        caption: "MCP Server Response Example",
+        sub: "Real-world MCP response showing component API, variants, token constraints, and ARIA requirements exposed to AI agents",
+        section: "result",
+      },
+      {
+        img: MCPResult,
+        caption: "MCP Results & Impact Metrics",
+        sub: "Measured productivity gains: 30% faster development, 75% fewer review cycles, and 8% rework rate across 5 product lines",
+        section: "result",
       },
     ],
     code: {

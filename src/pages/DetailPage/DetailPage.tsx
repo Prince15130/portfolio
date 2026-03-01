@@ -51,17 +51,23 @@ export default function DetailPage() {
     project.rolesAndResponsibilities &&
     project.outcomes;
 
-  const challengeShots = project.screenshots.slice(0, 2);
-  const taskShots = project.screenshots.slice(2, 4);
-  const tokenPipelineScreenshot = project.screenshots.slice(4, 5)[0];
-  const resultShots = project.screenshots.slice(5, 7);
-  const galleryShots = project.screenshots.slice(7);
+  const challengeShots = project.screenshots.filter(
+    (s) => s.section === "challenge",
+  );
+  const taskShots = project.screenshots.filter((s) => s.section === "task");
+  const tokenPipelineScreenshot = project.screenshots.find(
+    (s) => s.section === "pipeline",
+  );
+  const resultShots = project.screenshots.filter((s) => s.section === "result");
+  const galleryShots = project.screenshots.filter(
+    (s) => !s.section || s.section === "gallery",
+  );
 
   return (
     <main className={styles.main}>
       {/* ── Hero ── */}
       <div className={styles.hero}>
-        <button className={styles.backBtn} onClick={() => navigate(-1)}>
+        <button className={styles.backBtn} onClick={() => navigate("/")}>
           ← Back to all work
         </button>
         <div className={styles.heroGrid}>

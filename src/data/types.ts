@@ -13,6 +13,7 @@ export interface Screenshot {
   img: string;
   caption: string;
   sub: string;
+  section?: "challenge" | "task" | "pipeline" | "result" | "gallery";
 }
 
 export interface Metric {

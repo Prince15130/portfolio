@@ -24,7 +24,7 @@ export default function Nav() {
       <ul className={styles.links}>
         {isDetail ? (
           <li>
-            <button onClick={() => navigate(-1)} className={styles.link}>
+            <button onClick={() => navigate("/")} className={styles.link}>
               ← All Projects
             </button>
           </li>
