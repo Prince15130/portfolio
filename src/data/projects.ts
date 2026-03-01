@@ -9,12 +9,15 @@ import vanillaExtractDocs from "../assets/vanilla-extract-docs.png";
 import settingsTemplate from "../assets/settings-template.png";
 import themeSetup from "../assets/theme-setup.png";
 import reactComponents from "../assets/react-components.png";
-import filamentOverview from "../assets/filament-overview.png";
 import tokenPipeline from "../assets/token-pipeline.png";
 import DesignSystemChallenge from "../assets/design-system-challenge.png";
 import caseStudy from "../assets/Case Study Final Frame.png";
 import tokenSystem from "../assets/token-system.png";
 import tokenNaming from "../assets/tokens-naming.png";
+import Filament from "../assets/Filament-Design-System.png";
+import Result from "../assets/Result.png";
+import businessGoals from "../assets/business-goals.png";
+import designGoals from "../assets/design-goals.png";
 
 import type { Project } from "./types";
 
@@ -24,7 +27,7 @@ export const projects: Project[] = [
     num: "01",
     title: "Philips Filament Design System",
     subtitle:
-      "Enterprise-scale design system powering 368 applications across healthcare & consumer",
+      "From 30+ toolkits to one. Filament is the token-driven, accessibility-first design system I engineered to power 300+  Philips applications — from ICU patient monitors to consumer health apps.",
     tags: [
       "Vanilla Extract",
       "ReactAria",
@@ -33,14 +36,14 @@ export const projects: Project[] = [
       "Storybook 10",
     ],
     problem:
-      "Philips maintained 30+ fragmented UI toolkits used across 368 applications — creating massive overhead, inconsistent UX, and slow time-to-market across clinical and consumer product lines.",
+      "Philips maintained 30+ fragmented UI toolkits used across 300+ applications — creating massive overhead, inconsistent UX, and slow time-to-market across clinical and consumer product lines.",
     role: "Led the engineering foundations as Design Technologist on the Central Design Team — architecting the three-layer token system, Vanilla Extract component library, and driving org-wide adoption.",
     outcome:
       "Reduced toolkits from 30+ to 2 central libraries. 77% increase in accessibility compliance. 25% cost reduction. iF Design Award + 3× Red Dot Award recognition.",
     metrics: [
       { val: "93%", lbl: "Fewer Libraries" },
-      { val: "132+", lbl: "Components" },
-      { val: "368", lbl: "Apps Powered" },
+      { val: "60+", lbl: "Components" },
+      { val: "30+", lbl: "Apps Powered" },
       { val: "77%", lbl: "A11y Increase" },
       { val: "25%", lbl: "Cost Reduction" },
     ],
@@ -48,7 +51,7 @@ export const projects: Project[] = [
       S: {
         title: "Situation",
         subtitle: "The fragmentation problem",
-        text: "When I joined Philips's Central Design Team (XDC), the organisation maintained over 30 UI toolkits of varying quality across 368 applications and touchpoints — spanning healthcare clinical platforms, patient monitors, and consumer health apps. Each business unit had built their own design library, leading to catastrophic UX fragmentation. Nurses using one Philips platform had to re-learn completely different interaction patterns when switching to another. Accessibility was an afterthought — WCAG compliance sat below 25% across the portfolio.",
+        text: "When I joined Philips's Central Design Team (XDC), the organisation maintained over 30 UI toolkits of varying quality across 300+ applications and touchpoints — spanning healthcare clinical platforms, patient monitors, and consumer health apps. Each business unit had built their own design library, leading to catastrophic UX fragmentation. Nurses using one Philips platform had to re-learn completely different interaction patterns when switching to another. Accessibility was an afterthought — WCAG compliance sat below 25% across the portfolio.",
         highlight:
           "The core problem: no single source of truth, no scalable token architecture, and zero automated quality gates.",
       },
@@ -69,16 +72,16 @@ export const projects: Project[] = [
       R: {
         title: "Result",
         subtitle: "Measured impact",
-        text: "Within 18 months: the 30+ UI toolkits consolidated to 2 central libraries — a 93% reduction. The Filament DS powers 50+ applications across Philips's entire portfolio. Accessibility compliance went from below 25% to near 100% at the foundation level — a 77% improvement. Adoption rate increased by 49% from business units within 3 sessions of introduction. Development time reduced by 25% (confirmed by teams like Vaibhav at OneSpace). The system won the iF Design Award and Red Dot Award.",
+        text: "Within 18 months: the 30+ UI toolkits consolidated to 2 central libraries — a 93% reduction. The Filament DS powers 30+ applications across Philips's entire portfolio. Accessibility compliance went from below 25% to near 100% at the foundation level — a 77% improvement. Adoption rate increased by 49% from business units within 3 sessions of introduction. Development time reduced by 25% (confirmed by teams like Sunil Kumar at Grooming & Beauty). The system won the iF Design Award and Red Dot Award.",
         highlight:
-          '"We can save 20–30% effort in UI/UX development using the DLS toolkits." — Vaibhav, Software Technologist, OneSpace, Philips',
+          '"We can save 20–30% effort in UI/UX development using the DLS toolkits." — Sunil Kumar, Software Technologist, Grooming & Beauty, Philips',
       },
     },
     screenshots: [
       {
         img: DesignSystemChallenge,
         caption: "Filament Design System Challenge",
-        sub: "Fragmented toolkits, inconsistent UX, and slow time-to-market across 50+ applications — the problem Filament was built to solve",
+        sub: "Fragmented toolkits, inconsistent UX, and slow time-to-market across 300+ applications — the problem Filament was built to solve",
       },
       {
         img: caseStudy,
@@ -86,19 +89,29 @@ export const projects: Project[] = [
         sub: "Case study frame from the Filament Design System project",
       },
       {
-        img: tokenNaming,
-        caption: "Token Naming",
-        sub: "Illustration of the token naming conventions used in the Filament Design System",
+        img: businessGoals,
+        caption: "Business Goals",
+        sub: "Illustration of the business goals driving the Filament Design System project",
       },
       {
-        img: tokenSystem,
-        caption: "Token System",
-        sub: "Illustration of the token system architecture used in the Filament Design System",
+        img: designGoals,
+        caption: "Design Goals",
+        sub: "Illustration of the design goals driving the Filament Design System project",
       },
       {
         img: tokenPipeline,
         caption: "Token-to-Template Pipeline",
         sub: "Filament Tokens → Token Compiler → Themes (VE contracts) → Component Styles → React Components → Templates",
+      },
+      {
+        img: Filament,
+        caption: "Filament Design System",
+        sub: "One design system for all of Philips — from ICU patient monitors to consumer health apps — with 60+ accessible React components and a scalable token architecture",
+      },
+      {
+        img: Result,
+        caption: "Project Results",
+        sub: "Measured impact and outcomes of the Filament Design System project",
       },
       {
         img: filamentQuickstart,
@@ -174,7 +187,7 @@ export const compileTokens = async (
 };`,
     },
     challengeText:
-      "Philips maintained over 30 UI toolkits of varying quality across 368 applications and touchpoints — spanning healthcare clinical platforms, patient monitors, and consumer health apps. This fragmentation was not only unproductive, creating massive cost overhead, but also led to deeply inconsistent user experiences. Nurses using one Philips platform had to re-learn completely different interaction patterns when switching to another. Accessibility was an afterthought with WCAG compliance below 25% across the entire portfolio. The business needed a single source of truth — a scalable, token-driven system that every product team could adopt without breaking their existing applications.",
+      "Philips maintained over 30 UI toolkits of varying quality across 300 applications and touchpoints — spanning healthcare clinical platforms, patient monitors, and consumer health apps. This fragmentation was not only unproductive, creating massive cost overhead, but also led to deeply inconsistent user experiences. Nurses using one Philips platform had to re-learn completely different interaction patterns when switching to another. Accessibility was an afterthought with WCAG compliance below 25% across the entire portfolio. The business needed a single source of truth — a scalable, token-driven system that every product team could adopt without breaking their existing applications.",
     rolesAndResponsibilities: [
       "Led the libraries team within the DLS programme from both process and content side.",
       "Defined strategy for system architecture, token layers, toolkits, and org-wide adoption roadmap.",
@@ -186,13 +199,13 @@ export const compileTokens = async (
       "Facilitated trainings, workshops, and champions programme to drive adoption across 15 product teams.",
     ],
     outcomes: [
-      "New design system with 23+ modules, patterns, and 132+ accessible React components.",
+      "New design system with 23+ modules, patterns, and 60+ accessible React components.",
       "Consolidated 30+ UI toolkits down to 2 central libraries — a 93% reduction in fragmentation.",
       "WCAG accessibility compliance improved from <25% to near 100% at the foundation level (77% increase).",
       "Scalable migration path with design tokens and documentation enabling teams to adopt with zero breaking changes.",
       "25% reduction in UI/UX development cost confirmed by product teams across Grooming & Beauty, Health Tech, and Clinical.",
-      "Adoption rate increased 49% within 3 onboarding sessions; 368 applications now powered by Filament.",
-      "iF Design Award 2024 + 3× Red Dot Award recognition for design system excellence.",
+      "Adoption rate increased 49% within 3 onboarding sessions; 30+ applications now powered by Filament.",
+      "iF Design Award 2024 + Red Dot Award recognition for design system excellence.",
     ],
   },
 
@@ -308,119 +321,6 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
 });
 
 // Result: 30% faster dev · 75% fewer review cycles · 8% rework rate`,
-    },
-  },
-
-  {
-    id: "cross-platform",
-    num: "03",
-    title: "Cross-Platform Harmonisation",
-    subtitle:
-      "Standardising patient monitoring UX across Acute, Ambulatory, and Health Informatics platforms",
-    tags: [
-      "Clinical UX",
-      "SAAS Platform",
-      "Accessibility",
-      "Interaction Design",
-      "UX Research",
-    ],
-    problem:
-      "Philips's Connected Care platform had 15+ independent clinical applications each with unique navigation patterns, interaction models, and visual languages — creating dangerous cognitive load for ICU nurses.",
-    role: "Led E2E UX harmonisation on the Acute Patient Monitoring Platform — from discovery audits through information architecture, interaction design, and validation with 18 clinical users.",
-    outcome:
-      "31.7% increase in usability scores. 20% decrease in learning curve. Harmonised navigation framework now used across 3 major clinical platforms.",
-    metrics: [
-      { val: "31.7%", lbl: "Usability Increase" },
-      { val: "20%", lbl: "Learning Curve ↓" },
-      { val: "18", lbl: "Users Tested" },
-      { val: "3", lbl: "Platforms Unified" },
-      { val: "83", lbl: "SUS Score" },
-    ],
-    star: {
-      S: {
-        title: "Situation",
-        subtitle: "Fragmented clinical landscape",
-        text: "Philips operates across healthcare specialisations: Acute Patient Monitoring, Ambulatory Monitoring, and Health Informatics. Each had evolved independently, creating 15+ standalone clinical applications with radically different navigation structures, information hierarchies, and interaction paradigms. An ICU nurse moving between the Patient Information Center and a radiology reporting tool had to mentally re-load an entirely different design system mid-workflow. In high-stakes clinical environments, cognitive load kills.",
-        highlight:
-          "Context: these tools run in ICUs, operating theatres, and radiology departments — where interaction errors carry patient safety implications.",
-      },
-      T: {
-        title: "Task",
-        subtitle: "Platform harmonisation mandate",
-        text: "My mandate was to lead UX harmonisation for the Acute Patient Monitoring Platform (AcPMP) — the leading product in the North American clinical market. I was responsible for: conducting the design and process flow audit, identifying shared component patterns across platforms, redesigning the surveillance screen information architecture, building the decoupled primary/secondary/sector navigation framework, and validating with real clinical users.",
-        highlight:
-          "Constraint: zero breaking changes allowed. The platform serves live patient monitoring in active hospital systems.",
-      },
-      A: {
-        title: "Action",
-        subtitle: "The harmonisation methodology",
-        text: "I started with a full design and process flow audit across all 15+ applications — cataloguing every navigation pattern, component, and interaction model. Working with the UXR team, I synthesised field research from clinical environments. I defined the harmonisation approach in three pillars: Baseline (token alignment), Modularisation (shared component inventory), and Governance (adoption strategy). I redesigned the Patient Sector from scratch: decoupling the sector header, waveform display, vital numerics, and alert system into independently scalable modules. I built the decoupled navigation framework — Primary Header, Secondary Header, and Sector Toolbar — that could adapt to any clinical context.",
-        highlight:
-          "Key insight from research: clinicians preferred the Expanding Toolbar over Overlay because it never blocked patient vital data during critical moments.",
-      },
-      R: {
-        title: "Result",
-        subtitle: "Clinical validation outcomes",
-        text: "The SUS score for the prototype was 83 — versus 68 for the existing product. 13/18 participants rated the prototype higher. 31.7% overall increase in usability, 20% decrease in user learning curve. The navigation framework was adopted across 3 platforms. Mark Daly, Head of Product Marketing at Radiology Solutions: 'A new experience that not only looks and feels genuinely integrated with other Philips products, but also improves usability and efficiency for our clinical users.'",
-        highlight:
-          '"…improves usability and efficiency for our clinical users." — Mark Daly, Head of Product Marketing, Radiology Solutions',
-      },
-    },
-    screenshots: [
-      {
-        img: radiologyViewer,
-        caption: "Enterprise Radiology Viewer",
-        sub: "CT scan workflow with Filament-based navigation: patient context header, study thumbnails, and clinical toolbars",
-      },
-      {
-        img: storybookDatagrid,
-        caption: "Clinical Worklist Template",
-        sub: "Patient list with filter, sort, and status tracking — built on Filament Datagrid with clinical-specific density settings",
-      },
-    ],
-    code: {
-      label: "ClinicalLayout.tsx",
-      language: "tsx",
-      content: `import {
-  PrimaryHeader,
-  SecondaryHeader,
-  SectorToolbar,
-} from '@filament/react/navigation';
-import { FlexBox } from '@filament/react';
-import type { ClinicalPlatform } from './types';
-
-// Decoupled clinical navigation framework
-// Three-layer: Primary Header | Secondary Header | Sector Toolbar
-export const ClinicalLayout = ({
-  platform,
-}: {
-  platform: ClinicalPlatform;
-}) => (
-  <FlexBox direction="column" className={styles.layout}>
-
-    {/* Context-aware platform header — adapts to any Philips platform */}
-    <PrimaryHeader
-      logo="philips"
-      patientContext={platform.activePatient}
-      userActions={platform.userActions}
-    />
-
-    {/* Platform-specific secondary navigation modules */}
-    <SecondaryHeader modules={platform.modules} />
-
-    {/* Expanding toolbar — never overlays patient vital data */}
-    <SectorToolbar
-      mode="expanding"
-      vitals={platform.vitals}
-      alerts={platform.activeAlerts}
-    />
-
-    <main className={styles.content}>
-      {platform.children}
-    </main>
-
-  </FlexBox>
-);`,
     },
   },
 ];

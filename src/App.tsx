@@ -6,7 +6,7 @@ import "./styles/global.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio/">
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />

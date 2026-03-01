@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import MetricsStrip from "../../components/MetricsStrip/MetricsStrip";
@@ -24,6 +25,10 @@ export default function DetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   const project = projects.find((p) => p.id === id);
   const currentIndex = projects.findIndex((p) => p.id === id);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
@@ -49,7 +54,8 @@ export default function DetailPage() {
   const challengeShots = project.screenshots.slice(0, 2);
   const taskShots = project.screenshots.slice(2, 4);
   const tokenPipelineScreenshot = project.screenshots.slice(4, 5)[0];
-  const galleryShots = project.screenshots.slice(5);
+  const resultShots = project.screenshots.slice(5, 7);
+  const galleryShots = project.screenshots.slice(7);
 
   return (
     <main className={styles.main}>
@@ -220,7 +226,7 @@ export default function DetailPage() {
           </div>
 
           <div className={styles.challengeScreenshots}>
-            {challengeShots.map((s, i) => (
+            {resultShots.map((s, i) => (
               <Screenshot key={i} item={s} />
             ))}
           </div>
